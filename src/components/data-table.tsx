@@ -23,7 +23,7 @@ const weekDays = [
   "friday",
   "saturday",
   "sunday",
-]
+];
 
 export const Datatable = ({ days, onDeleteTask }: Props) => {
   return (
@@ -41,15 +41,18 @@ export const Datatable = ({ days, onDeleteTask }: Props) => {
           <tr>
             {weekDays.map((day) => (
               <td key={day}>
-                {days[day]?.map((task) => (
-                  <div key={task.id}>
-                    <strong>{task.name}</strong>
-                    <div>{task.time}</div>
-                    <button onClick={() => onDeleteTask(day, task.id)}>
-                      Eliminar
-                    </button>
-                  </div>
-                ))}
+                {days[day]
+                  ?.slice()
+                  .sort((a, b) => a.time.localeCompare(b.time))
+                  .map((task) => (
+                    <div key={task.id}>
+                      <strong>{task.name}</strong>
+                      <div>{task.time}</div>
+                      <button onClick={() => onDeleteTask(day, task.id)}>
+                        Eliminar
+                      </button>
+                    </div>
+                  ))}
               </td>
             ))}
           </tr>
