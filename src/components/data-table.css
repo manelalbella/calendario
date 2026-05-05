@@ -1,0 +1,68 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.table th {
+  text-transform: capitalize;
+  padding: 12px;
+  background-color: #0a57c9;
+  color: #f7f0f0;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.table td {
+  vertical-align: top;
+  padding: 10px;
+  border-right: 1px solid #f0f0f0;
+  height: 150px;
+}
+
+.table td:last-child {
+  border-right: none;
+}
+
+.table td > div {
+  background: #ffffff;
+  border: 1px solid #0a57c9;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+}
+
+.table td > div:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.table strong {
+  display: block;
+  font-size: 14px;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.table td div div strong {
+  font-size: 12px;
+  color: #181616;
+  margin-bottom: 8px;
+}
+
+.table button {
+  background: transparent;
+  border: none;
+  color: #ff4d4f;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: all 0.2s ease;
+}
+
+.table button:hover {
+  color: #d9363e;
+  text-decoration: underline; 
+}
