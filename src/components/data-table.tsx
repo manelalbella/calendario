@@ -41,8 +41,7 @@ export const Datatable = ({ days, onDeleteTask }: Props) => {
           <tr>
             {weekDays.map((day) => (
               <td key={day}>
-                {days[day]
-                  ?.slice()
+                {[...days[day]]
                   .sort((a, b) => a.time.localeCompare(b.time))
                   .map((task) => (
                     <div key={task.id}>
